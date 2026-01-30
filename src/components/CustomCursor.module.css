@@ -1,0 +1,44 @@
+/*
+  Styles for the CustomCursor component.
+  These class names will be scoped locally to the component.
+*/
+
+.cursorDot {
+    position: fixed;
+    width: 6px;
+    height: 6px;
+    background-color: #c59d5f;
+    /* Accent color */
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 12px rgba(197, 157, 95, 0.6);
+    animation: pulseGlow 2s ease-in-out infinite;
+}
+
+.cursorOutline {
+    position: fixed;
+    width: 32px;
+    height: 32px;
+    border: 2px solid #c59d5f;
+    /* Accent color */
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    opacity: 0.4;
+    transition: all 0.1s ease-out;
+}
+
+@keyframes pulseGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px rgba(197, 157, 95, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 30px rgba(197, 157, 95, 0.6);
+    }
+}
